@@ -2,54 +2,73 @@
 
 Stylesheet:	reset.css
 
-Description:	"The foundational YUI Reset CSS file removes and neutralizes the
-			 inconsistent default styling of HTML elements, creating a level
-			 playing field across A-grade browsers and providing a sound
-			 foundation upon which you can explicitly declare your intentions."
+Description:	A modernized foundational CSS reset file. This removes and neutralizes
+				inconsistent default styling of HTML elements, creating a level
+				playing field across browsers and providing a sound foundation
+				upon which you can explicitly declare your design intentions.
 
-Author:		Yahoo! User Interface Library
+Author:		Adapted from Yahoo! User Interface Library Reset
 
-Source:		http://developer.yahoo.com/yui/reset/
+Source:		https://necolas.github.io/normalize.css/
 
 *********************************************************************************/
 
-
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
-	margin:0;
-	padding:0;
+/* Resetting common elements */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { 
+	margin: 0;
+	padding: 0;
 }
 
+/* Ensuring consistent table display */
 table {
-	border-collapse:collapse;
-	border-spacing:0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-fieldset,img { 
-	border:0;
+/* Removing borders from images and fieldsets */
+fieldset, img { 
+	border: 0;
 }
 
-address,caption,cite,code,dfn,em,strong,th,var {
-	font-style:normal;
-	font-weight:normal;
+/* Normalizing font styles */
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style: normal;
+	font-weight: normal;
 }
 
-ol,ul {
-	list-style:none;
+/* Removing list styles */
+ol, ul {
+	list-style: none;
 }
 
-caption,th {
-	text-align:left;
+/* Aligning captions and table headers */
+caption, th {
+	text-align: left;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	font-size:100%;
-	font-weight:normal;
+/* Normalizing header styles */
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
 }
 
-q:before,q:after {
-	content:'';
+/* Resetting quotes */
+q:before, q:after {
+	content: '';
 }
 
-abbr,acronym {
-	border:0;
+/* Removing borders from abbreviations and acronyms */
+abbr, acronym {
+	border: 0;
+}
+
+/* Applying a universal box-sizing for better layout consistency */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+/* Ensuring focus styles for accessibility */
+:focus {
+	outline: 2px solid blue;
+	outline-offset: 2px;
 }

@@ -1,79 +1,93 @@
 @charset "utf-8";
 
+/* General Styles */
 html {
-	height: 100%;
+    height: 100%;
 }
 
 body {
-	height: 100%;
-	background: #f9f9f9;
+    height: 100%;
+    background: #f9f9f9;
 }
 
+/* Centered Container */
 #container {
-	width: 600px;
-	margin: 50px auto 0 auto;
-	text-align:center;
+    width: 600px;
+    margin: 50px auto 0;
+    text-align: center;
 }
 
+/* Portfolio Section */
 #portfolio {
-	width: 600px;
-	margin: 20px 0 0 0;
+    width: 100%; /* Changed to relative width for responsiveness */
+    max-width: 600px; /* Added maximum width */
+    margin: 20px 0 0;
 }
 
 #portfolio ul li {
-	display:inline;
+    display: inline-block; /* Changed to inline-block for better control */
 }
 
-
+/* Portfolio Display */
 #portfolioDisplay {
-	width: 600px;
-	margin-top:15px;
-	font-family: arial;
-	font-size: 14px;
-	color: #666;
-	text-shadow: 0.1em 0.1em #ececec;
+    width: 100%; /* Changed to relative width for responsiveness */
+    max-width: 600px;
+    margin-top: 15px;
+    font-family: Arial, sans-serif; /* Added fallback font */
+    font-size: 14px;
+    color: #666;
+    text-shadow: 0.1em 0.1em #ececec;
 }
 
-
-#portfolioDisplay .thumbs img{
-	padding:5px;
-	margin-top:10px;	
+#portfolioDisplay .thumbs img {
+    padding: 5px;
+    margin-top: 10px;
 }
 
-#networks img{
-	padding: 5px 15px 5px 15px;
-	margin-top:0px;	
+/* Social Networks */
+#networks img {
+    padding: 5px 15px;
+    margin-top: 0;
 }
 
-#contact{
-	text-align:left;
-	margin: 0 auto 0 auto;
-	width:225px;	
+/* Contact Section */
+#contact {
+    text-align: left;
+    margin: 0 auto;
+    width: 225px;
 }
 
-#contactinfo{
-	float:right;
-	width:175px;
-	}
-
-#contactinfo li{
-	font-size: 12px;
-	margin-top:16px;
-	margin-left:10px;
-	height:36px;
-		}
-	
-#contacticons{
-	float:left;
-	width:50px;
-		}
-#clear{
-	clear:both;	
+#contactinfo {
+    display: flex; /* Replaced float with Flexbox */
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px; /* Added gap for spacing */
 }
-	
-	
-	
-	
-	
-	
-	
+
+#contactinfo li {
+    font-size: 12px;
+    margin-top: 16px;
+    height: 36px;
+}
+
+#contacticons {
+    flex: 0 0 50px; /* Flexbox replacement for float and width */
+}
+
+/* Utility */
+#clear {
+    clear: both;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #container,
+    #portfolio,
+    #portfolioDisplay {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    #contact {
+        width: auto; /* Allow contact section to adapt */
+    }
+}
